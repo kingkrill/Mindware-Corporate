@@ -8,10 +8,16 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://mindwareindia.in',
-  integrations: [mdx(), sitemap()],
+  
+  // 1. REPLACE this line
+  site: 'https://kingkrill.github.io',
 
-  vite: {
-    plugins: [tailwindcss()],
-  },
+  // 2. ADD this line
+  base: '/Mindware-Corporate',
+
+  integrations: [mdx(), sitemap()],
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
