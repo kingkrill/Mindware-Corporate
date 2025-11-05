@@ -1,0 +1,485 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+// 1. Import the <Image /> component for your carousel
+import { Image } from 'astro:assets';
+
+/* 2. Import your hero images */
+import carousel1 from '../assets/carousel1.jpeg';
+import carousel2 from '../assets/carousel2.jpeg';
+import carousel3 from '../assets/carousel3.jpeg';
+import carousel4 from '../assets/carousel4.jpeg';
+import carousel5 from '../assets/carousel5.jpeg';
+import carousel6 from '../assets/carousel6.jpeg';
+import carousel7 from '../assets/carousel7.jpeg';
+import carousel8 from '../assets/carousel8.jpeg';
+import carousel9 from '../assets/carousel9.jpeg';
+import carousel10 from '../assets/carousel10.jpeg';
+import carousel11 from '../assets/carousel11.jpeg';
+import carousel12 from '../assets/carousel12.jpeg';
+import carousel13 from '../assets/carousel13.jpeg';
+import carousel14 from '../assets/carousel14.jpeg';
+import carousel15 from '../assets/carousel15.jpeg';
+
+/* 3. NEW: Import your client logos */
+import client1 from '../assets/client1.png';
+import client2 from '../assets/client2.png';
+import client3 from '../assets/client3.png';
+import client4 from '../assets/client4.png';
+import client5 from '../assets/client5.png';
+import client6 from '../assets/client6.png';
+import client7 from '../assets/client7.png';
+import client8 from '../assets/client8.png';
+import client9 from '../assets/client9.png';
+import client10 from '../assets/client10.png';
+import client11 from '../assets/client11.png';
+import client12 from '../assets/client12.png';
+import client13 from '../assets/client13.png';
+import client14 from '../assets/client14.png';
+import client15 from '../assets/client15.png';
+import client16 from '../assets/client16.png';
+import client17 from '../assets/client17.png';
+import client18 from '../assets/client18.png';
+import client19 from '../assets/client19.png';
+import client20 from '../assets/client20.png';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+
+    <!-- === HERO SECTION === -->
+    <section class="hero">
+      <div class="scrolling-collage-bg">
+        <div class="collage-column">
+          <!-- Column 1 Images -->
+          <Image src={carousel1} alt="Corporate training session" loading="lazy" />
+          <Image src={carousel2} alt="Leadership workshop" loading="lazy" />
+          <Image src={carousel3} alt="Team building event" loading="lazy" />
+          <Image src={carousel4} alt="Professional growth seminar" loading="lazy" />
+          <Image src={carousel5} alt="Business strategy meeting" loading="lazy" />
+          <!-- Duplicates for seamless loop -->
+          <Image src={carousel1} alt="Corporate training session" loading="lazy" />
+          <Image src={carousel2} alt="Leadership workshop" loading="lazy" />
+          <Image src={carousel3} alt="Team building event" loading="lazy" />
+          <Image src={carousel4} alt="Professional growth seminar" loading="lazy" />
+          <Image src={carousel5} alt="Business strategy meeting" loading="lazy" />
+        </div>
+        <div class="collage-column">
+          <!-- Column 2 Images -->
+          <Image src={carousel6} alt="Success metrics" loading="lazy" />
+          <Image src={carousel7} alt="Focus group" loading="lazy" />
+          <Image src={carousel8} alt="Innovation workshop" loading="lazy" />
+          <Image src={carousel9} alt="Taking action" loading="lazy" />
+          <Image src={carousel10} alt="Mindware event" loading="lazy" />
+          <!-- Duplicates for seamless loop -->
+          <Image src={carousel6} alt="Success metrics" loading="lazy" />
+          <Image src={carousel7} alt="Focus group" loading="lazy" />
+          <Image src={carousel8} alt="Innovation workshop" loading="lazy" />
+          <Image src={carousel9} alt="Taking action" loading="lazy" />
+          <Image src={carousel10} alt="Mindware event" loading="lazy" />
+        </div>
+        <div class="collage-column">
+          <!-- Column 3 Images -->
+          <Image src={carousel11} alt="Clarity in goals" loading="lazy" />
+          <Image src={carousel12} alt="Growth mindset" loading="lazy" />
+          <Image src={carousel13} alt="Business results" loading="lazy" />
+          <Image src={carousel14} alt="Company culture" loading="lazy" />
+          <Image src={carousel15} alt="Presentation" loading="lazy" />
+          <!-- Duplicates for seamless loop -->
+          <Image src={carousel11} alt="Clarity in goals" loading="lazy" />
+          <Image src={carousel12} alt="Growth mindset" loading="lazy" />
+          <Image src={carousel13} alt="Business results" loading="lazy" />
+          <Image src={carousel14} alt="Company culture" loading="lazy" />
+          <Image src={carousel15} alt="Presentation" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="container">
+        <h1>Transformational Corporate Training</h1>
+        <p class="subtitle">
+          We empower organizations by creating customized, action-based, and
+          highly result-oriented training programs.
+        </p>
+        <a href="/contact" class="cta-button">Request a Consultation</a>
+      </div>
+    </section>
+
+    <!-- === ABOUT BLURB === -->
+    <section class="about-blurb">
+      <div class="container">
+        <!-- 
+          This "about-card" is now the animated card.
+          The bubble animation is contained *inside* it.
+        -->
+        <div class="about-card">
+          <!-- Animated Bubble Background -->
+          <div class="bubble-background">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+
+          <!-- About Content (sits on top of bubbles) -->
+          <div class="about-card-content">
+            <h2>Who We Are</h2>
+            <p>
+              Mindware is a leader in corporate, school, and personal
+              transformational training. Our passionate team is dedicated to
+              inspiring lives and transforming people through practical,
+              action-based programs.
+            </p>
+            <a href="/about" class="secondary-button">Learn More About Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- === SERVICES PREVIEW === -->
+    <section class="services-preview">
+      <div class="container">
+        <h2>Our Core Programs</h2>
+        <!-- 
+          Cards are now colored by vibrant CSS rules.
+        -->
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Leadership Development</h3>
+            <p>
+              Unlock the potential of your managers and executives with our
+              cutting-edge leadership programs.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3>Team Building</h3>
+            <p>
+              Foster communication, collaboration, and a positive work culture
+              with our engaging team workshops.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3>Sales & Communication</h3>
+            <p>
+              Equip your teams with the skills they need to communicate
+              effectively and drive results.
+            </p>
+          </div>
+        </div>
+        <div class="services-link">
+          <a href="/services" class="secondary-button">View All Programs</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- === CLIENT TRUST SECTION (UPDATED) === -->
+    <section class="clients-trust">
+      <div class="container">
+        <h2>Trusted By Leading Organizations</h2>
+        <p>
+          We are proud to have partnered with companies of all sizes to empower
+          their teams.
+        </p>
+        
+        <!-- UPDATED: Logo Scroller Container -->
+        <div class="logo-scroller-container">
+          <!-- Row 1: Scrolls Left -->
+          <div class="logo-scroller scroll-left">
+            <!-- Replaced <span> tags with <Image /> components -->
+            <Image src={client1} alt="Client 1 Logo" class="client-logo-item" />
+            <Image src={client2} alt="Client 2 Logo" class="client-logo-item" />
+            <Image src={client3} alt="Client 3 Logo" class="client-logo-item" />
+            <Image src={client4} alt="Client 4 Logo" class="client-logo-item" />
+            <Image src={client5} alt="Client 5 Logo" class="client-logo-item" />
+            <Image src={client6} alt="Client 6 Logo" class="client-logo-item" />
+            <Image src={client7} alt="Client 7 Logo" class="client-logo-item" />
+            <Image src={client8} alt="Client 8 Logo" class="client-logo-item" />
+            <Image src={client9} alt="Client 9 Logo" class="client-logo-item" />
+            <Image src={client10} alt="Client 10 Logo" class="client-logo-item" />
+            <!-- Duplicate the row for seamless loop -->
+            <Image src={client1} alt="Client 1 Logo" class="client-logo-item" />
+            <Image src={client2} alt="Client 2 Logo" class="client-logo-item" />
+            <Image src={client3} alt="Client 3 Logo" class="client-logo-item" />
+            <Image src={client4} alt="Client 4 Logo" class="client-logo-item" />
+            <Image src={client5} alt="Client 5 Logo" class="client-logo-item" />
+            <Image src={client6} alt="Client 6 Logo" class="client-logo-item" />
+            <Image src={client7} alt="Client 7 Logo" class="client-logo-item" />
+            <Image src={client8} alt="Client 8 Logo" class="client-logo-item" />
+            <Image src={client9} alt="Client 9 Logo" class="client-logo-item" />
+            <Image src={client10} alt="Client 10 Logo" class="client-logo-item" />
+          </div>
+          
+          <!-- Row 2: Scrolls Right -->
+          <div class="logo-scroller scroll-right">
+            <!-- Replaced <span> tags with <Image /> components -->
+            <Image src={client11} alt="Client 11 Logo" class="client-logo-item" />
+            <Image src={client12} alt="Client 12 Logo" class="client-logo-item" />
+            <Image src={client13} alt="Client 13 Logo" class="client-logo-item" />
+            <Image src={client14} alt="Client 14 Logo" class="client-logo-item" />
+            <Image src={client15} alt="Client 15 Logo" class="client-logo-item" />
+            <Image src={client16} alt="Client 16 Logo" class="client-logo-item" />
+            <Image src={client17} alt="Client 17 Logo" class="client-logo-item" />
+            <Image src={client18} alt="Client 18 Logo" class="client-logo-item" />
+            <Image src={client19} alt="Client 19 Logo" class="client-logo-item" />
+            <Image src={client20} alt="Client 20 Logo" class="client-logo-item" />
+            <!-- Duplicate the row for seamless loop -->
+            <Image src={client11} alt="Client 11 Logo" class="client-logo-item" />
+            <Image src={client12} alt="Client 12 Logo" class="client-logo-item" />
+            <Image src={client13} alt="Client 13 Logo" class="client-logo-item" />
+            <Image src={client14} alt="Client 14 Logo" class="client-logo-item" />
+            <Image src={client15} alt="Client 15 Logo" class="client-logo-item" />
+            <Image src={client16} alt="Client 16 Logo" class="client-logo-item" />
+            <Image src={client17} alt="Client 17 Logo" class="client-logo-item" />
+            <Image src={client18} alt="Client 18 Logo" class="client-logo-item" />
+            <Image src={client19} alt="Client 19 Logo" class="client-logo-item" />
+            <Image src={client20} alt="Client 20 Logo" class="client-logo-item" />
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- === FINAL CALL TO ACTION (CTA) === -->
+    <section class="final-cta">
+      <div class="container">
+        <h2>Ready to Empower Your Team?</h2>
+        <p>Let's talk about your organization's unique needs and goals.</p>
+        <a href="/contact" class="cta-button">Get in Touch</a>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  /* === 1. HERO SECTION: COLLAGE (Unchanged) === */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .scrolling-collage-bg {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    display: flex;
+    gap: 1rem;
+    z-index: 0;
+    opacity: 0.5; /* Increased opacity */
+    filter: grayscale(20%); /* Reduced grayscale */
+  }
+  .collage-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-grow: 1;
+    min-width: 300px;
+  }
+  .collage-column img,
+  .collage-column :global(img) { /* Selects Astro <Image> component */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  @keyframes scrollUp {
+    from { transform: translateY(0); }
+    to { transform: translateY(-50%); }
+  }
+  @keyframes scrollDown {
+    from { transform: translateY(-50%); }
+    to { transform: translateY(0); }
+  }
+  .collage-column:nth-child(1) {
+    animation: scrollUp 60s linear infinite alternate;
+  }
+  .collage-column:nth-child(2) {
+    animation: scrollDown 70s linear infinite alternate;
+  }
+  .collage-column:nth-child(3) {
+    animation: scrollUp 50s linear infinite alternate;
+  }
+  .hero .container {
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  }
+
+  /* === 2. ABOUT BLURB: ANIMATED CARD (Unchanged) === */
+  .about-blurb .container {
+    /* Remove padding so the card can be full-width if needed */
+    padding: 4rem 0;
+  }
+
+  .about-card {
+    /* This is the new animated card */
+    position: relative;
+    overflow: hidden; /* This keeps the bubbles inside the card */
+    background-color: var(--color-text-body); /* D_Grey background */
+    border-radius: 12px;
+    padding: 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid var(--color-text-light);
+  }
+
+  .about-card-content {
+    /* Sits on top of the bubbles */
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Ensure text inside the card is white */
+  .about-card h2,
+  .about-card p {
+    color: var(--color-bg);
+  }
+
+  .bubble-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .bubble-background i {
+    position: absolute;
+    bottom: -200px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-warning); 
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: rise 25s infinite linear;
+  }
+  @keyframes rise {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateY(-120vh) scale(0.2);
+      opacity: 0;
+    }
+  }
+  /* Vary bubble properties */
+  .bubble-background i:nth-child(1) { left: 10%; animation-duration: 20s; width: 30px; height: 30px; }
+  .bubble-background i:nth-child(2) { left: 20%; animation-duration: 15s; animation-delay: 2s; width: 50px; height: 50px; }
+  .bubble-background i:nth-child(3) { left: 30%; animation-duration: 22s; animation-delay: 5s; }
+  .bubble-background i:nth-child(4) { left: 40%; animation-duration: 18s; width: 20px; height: 20px; }
+  .bubble-background i:nth-child(5) { left: 50%; animation-duration: 25s; animation-delay: 1s; width: 60px; height: 60px; }
+  .bubble-background i:nth-child(6) { left: 60%; animation-duration: 16s; animation-delay: 3s; }
+  .bubble-background i:nth-child(7) { left: 70%; animation-duration: 21s; width: 35px; height: 35px; }
+  .bubble-background i:nth-child(8) { left: 80%; animation-duration: 17s; animation-delay: 4s; width: 55px; height: 55px; }
+  .bubble-background i:nth-child(9) { left: 90%; animation-duration: 23s; animation-delay: 6s; }
+  .bubble-background i:nth-child(10) { left: 55%; animation-duration: 28s; width: 25px; height: 25px; }
+
+
+  /* === 3. SERVICE CARDS: VIBRANT COLORS (Unchanged) === */
+  .services-preview .service-card {
+    border: none;
+    color: var(--color-bg); /* CHANGED: Make text white */
+  }
+
+  .services-preview .service-card h3 {
+    color: var(--color-bg); /* CHANGED: Make h3 white */
+  }
+
+  .services-preview .service-card:nth-child(1) {
+    background-color: var(--color-accent); /* Info Blue */
+  }
+  .services-preview .service-card:nth-child(2) {
+    background-color: var(--color-success); /* Success Green */
+  }
+  .services-preview .service-card:nth-child(3) {
+    background-color: var(--color-secondary); /* Secondary Yellow */
+    color: var(--color-primary); /* Use dark text on yellow bg */
+  }
+  .services-preview .service-card:nth-child(3) h3 {
+     color: var(--color-primary); /* Use dark text on yellow bg */
+  }
+
+  /* === 4. CLIENT TRUST: SCROLLER & BG (UPDATED CSS) === */
+
+  @keyframes scrollLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @keyframes animatedGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .clients-trust {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .clients-trust::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: linear-gradient(
+      90deg,
+      var(--color-primary),
+      var(--color-text-body),
+      var(--color-primary)
+    );
+    background-size: 200% 200%;
+    animation: animatedGradient 25s ease infinite;
+    opacity: 0.5;
+  }
+
+  .clients-trust .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .logo-scroller-container {
+    overflow: hidden;
+    margin-top: 3rem;
+  }
+
+  .logo-scroller {
+    display: flex;
+    width: max-content;
+    white-space: nowrap;
+    padding: 1rem 0;
+  }
+  
+  .scroll-left {
+    animation: scrollLeft 60s linear infinite; /* Slowed down for more logos */
+  }
+  
+  .scroll-right {
+    animation: scrollLeft 70s linear infinite reverse; /* Slowed down for more logos */
+  }
+
+  /* UPDATED: This now styles the <Image> component */
+  .client-logo-item {
+    max-height: 75px; /* CHANGED: Was fixed 'height' */
+    height: auto; /* ADDED: Let height be natural */
+    width: auto;  /* Let width adjust automatically */
+    max-width: 200px; /* Kept max-width */
+    object-fit: contain; /* Ensure logo fits, doesn't stretch */
+    padding: 0 3rem; /* Increased spacing */
+    /* filter: brightness(0) invert(1); REMOVED */
+    opacity: 1; /* Make logos fully visible */
+  }
+</style>

@@ -1,0 +1,36 @@
+---
+// src/pages/contact.astro
+
+// 1. Import all the components needed to build the page
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Contact Us"
+      description="Get in touch with the Mindware team to schedule a consultation."
+    />
+  </head>
+  <body>
+    <Header />
+
+    <main>
+      <h1>Contact Us</h1>
+      <p>
+        We'd love to hear from you. Please reach out to schedule a consultation
+        or ask any questions you may have.
+      </p>
+
+      <ul>
+        <li><strong>Email:</strong> info@mindware.com</li>
+        <li><strong>Phone:</strong> +91 12345 67890</li>
+      </ul>
+      
+      </main>
+
+    <Footer />
+  </body>
+</html>

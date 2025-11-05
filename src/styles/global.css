@@ -1,0 +1,397 @@
+/*
+  Based on the Mindware Corporate Design System
+*/
+
+:root {
+  /* NEUTRAL & PRIMARY COLORS
+    (From your "Neutral" and "Primary" sections) 
+  */
+  --color-primary: #263238; /* Neutral Black / Primary */
+  --color-text-body: #545d4d; /* D_Grey */
+  --color-text-light: #717171; /* Grey */
+  --color-text-lighter: #b6b59e; /* L_Grey */
+  --color-bg: #ffffff; /* White */
+  --color-bg-light: #f5f7fa; /* Silver */
+  --color-bg-greyblue: #bbe5e5; /* Grey-blue */
+
+  /* ACCENT & ACTION COLORS
+    (From "Secondary", "Info", and "Action")
+  */
+  --color-secondary: #ead01f; /* Secondary Yellow */
+  --color-accent: #2194f3; /* Info Blue */
+  --color-accent-dark: #1a75c2; /* Darker blue for hover */
+  --color-warning: #fbc02d;
+  --color-error: #e53b35;
+  --color-success: #2e7d31;
+
+  /* OLD VARIABLES (Mapped to new ones)
+    Kept for compatibility with any old components.
+  */
+  --accent: var(--color-accent);
+  --accent-dark: var(--color-accent-dark);
+  --black: 38, 50, 56; /* RGB for --color-primary */
+  --gray-dark: 84, 93, 77; /* RGB for --color-text-body */
+  --gray: 113, 113, 113; /* RGB for --color-text-light */
+  --gray-light: 245, 247, 250; /* RGB for --color-bg-light */
+
+  /* STYLES
+  */
+  --gray-gradient: rgba(var(--gray-light), 50%), #fff;
+  --box-shadow:
+    0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px
+    32px rgba(var(--gray), 33%);
+}
+@font-face {
+  font-family: 'Atkinson';
+  src: url('/fonts/atkinson-regular.woff') format('woff');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson';
+  src: url('/fonts/atkinson-bold.woff') format('woff');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Merriweather';
+  src: url('/fonts/Merriweather-VariableFont_opsz,wdth,wght.ttf') format('truetype');
+  font-style: normal;
+  /* This tells the browser this one file has all weights */
+  font-weight: 300 900; 
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('/fonts/Merriweather-Italic-VariableFont_opsz,wdth,wght.ttf') format('truetype');
+  /* This tells the browser this file is for italics */
+  font-style: italic; 
+  font-weight: 300 900;
+  font-display: swap;
+}
+/* NOTE: Your design specifies "Semi Bold" (600). 
+   We are mapping this to the available "Bold" (700) font. */
+
+body {
+  font-family: 'Atkinson', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background: var(--color-primary); /* Dark background */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: var(--color-bg); /* CHANGED: Use new White text */
+  font-size: 18px; /* Body 1 Regular 18/28 */
+  line-height: 1.55; /* (28 / 18) */
+  font-weight: 400;
+}
+
+/* This <main> style is for your BLOG POSTS.
+  The homepage (index.astro) does NOT use <main>.
+*/
+main {
+  width: 720px;
+  max-width: calc(100% - 2em);
+  margin: auto;
+  padding: 3em 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 1rem 0;
+  color: var(--color-bg); /* Use new White text */
+  font-weight: 700; /* Mapping "Semi Bold" to "Bold" */
+}
+/* Font sizes from your design guide */
+h1 {
+  font-size: 64px; /* 64/76 */
+  line-height: 1.18; /* (76 / 64) */
+}
+h2 {
+  font-size: 36px; /* 36/44 */
+  line-height: 1.22; /* (44 / 36) */
+}
+h3 {
+  font-size: 28px; /* 28/36 */
+  line-height: 1.28; /* (36 / 28) */
+}
+h4 {
+  font-size: 20px; /* 20/28 */
+  line-height: 1.4; /* (28 / 20) */
+}
+h5 {
+  font-size: 18px;
+  line-height: 1.55;
+}
+h6 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+a {
+  color: var(--color-accent); /* Use new Info Blue */
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-accent-dark);
+  text-decoration: underline;
+}
+p {
+  margin-bottom: 1em;
+}
+.prose p {
+  margin-bottom: 2em;
+}
+textarea {
+  width: 100%;
+  font-size: 16px;
+}
+input {
+  font-size: 16px;
+}
+table {
+  width: 100%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+code {
+  padding: 2px 5px;
+  background-color: var(--color-bg-light); /* Use new Silver */
+  color: var(--color-primary); /* ADDED: Dark text for light bg */
+  border-radius: 2px;
+}
+pre {
+  padding: 1.5em;
+  border-radius: 8px;
+}
+pre > code {
+  all: unset;
+}
+blockquote {
+  border-left: 4px solid var(--color-accent); /* Use new Info Blue */
+  padding: 0 0 0 20px;
+  margin: 0px;
+  font-size: 1.333em;
+}
+hr {
+  border: none;
+  border-top: 1px solid var(--color-bg-light); /* Use new Silver */
+}
+
+/* ==================================================
+  HOMEPAGE STYLES
+==================================================
+*/
+
+.container {
+  width: 1100px;
+  max-width: calc(100% - 4rem); /* 2rem padding on each side */
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* === Hero Section === */
+.hero {
+  /* background-color: var(--color-bg-light); DELETED */
+  text-align: center;
+}
+.hero .container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.hero .subtitle {
+  font-size: 1.25rem;
+  color: var(--color-bg-light); /* CHANGED: Use light text */
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+/* === Buttons === */
+.cta-button {
+  display: inline-block;
+  background-color: var(--color-secondary); /* Use new Secondary Yellow */
+  color: var(--color-primary); /* Use new Primary/Black for text */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.cta-button:hover {
+  background-color: var(--color-warning); /* Use Warning yellow for hover */
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(var(--black), 0.1);
+}
+
+.secondary-button {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  padding: 0.6rem 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.secondary-button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  text-decoration: none;
+}
+
+.about-blurb p {
+  max-width: 800px;
+  margin: 0 auto 1.5rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  text-align: left;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.service-card {
+  /* background: var(--color-bg); DELETED */
+  border: 1px solid var(--color-text-light); /* CHANGED: Make card visible */
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(var(--black), 0.05);
+}
+.service-card h3 {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.clients-trust p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 1.5rem auto;
+}
+.client-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  filter: brightness(0) invert(1); /* CHANGED: Make logos white */
+  opacity: 0.7;
+}
+
+/* === Final CTA Section === */
+.final-cta {
+  background-color: var(--color-primary); /* This will match the body bg */
+  color: var(--color-bg);
+  border-radius: 8px;
+  border: 1px solid var(--color-text-light); /* ADDED: To make it stand out */
+}
+.final-cta .container {
+  border-radius: 8px;
+}
+.final-cta h2 {
+  color: var(--color-bg);
+}
+.final-cta p {
+  color: var(--color-bg-light);
+  font-size: 1.1rem;
+}
+
+/* ==================================================
+  MOBILE & RESPONSIVE STYLES
+==================================================
+*/
+@media (max-width: 1100px) {
+  .container {
+    width: 100%;
+    max-width: calc(100% - 4rem);
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    font-size: 16px; /* Base mobile size */
+  }
+  main {
+    padding: 1em;
+  }
+  /* Scale headlines down on mobile */
+  h1 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  h4 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .container {
+    padding: 3rem 1em;
+    max-width: calc(100% - 2em);
+  }
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* ==================================================
+  UTILITIES
+==================================================
+*/
+.highlight-serif-bold {
+  font-family: 'Merriweather', 'Atkinson', serif;
+  font-weight: 700; /* Use the 700 bold weight */
+  font-style: normal;
+  color: var(--color-secondary); /* Makes it yellow */
+}
+
+.highlight-serif-italic {
+  font-family: 'Merriweather', 'Atkinson', serif;
+  font-weight: 400; /* Use the 400 regular weight */
+  font-style: italic; /* Use the italic style */
+  color: var(--color-accent); /* Makes it blue */
+}
+.sr-only {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  /* modern browsers, clip-path works inwards from each corner */
+  clip-path: inset(50%);
+  /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
+  white-space: nowrap;
+}
