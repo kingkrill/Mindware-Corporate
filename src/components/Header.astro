@@ -1,17 +1,21 @@
 ---
 import { SITE_TITLE } from '../consts';
-import HeaderLink from './HeaderLink.astro';
-// 1. Import the Image component
+// import HeaderLink from './HeaderLink.astro'; // <-- No longer needed
 import { Image } from 'astro:assets';
-// 2. Import your logo file (assuming it's at 'src/assets/logo.png')
-import logo from '../assets/logo.png'; 
+import logo from '../assets/logo.png';
+
+// Get the current path to set the "active" class
+// We remove the base path to compare with our simple hrefs
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
+// Get the first part of the path (e.g., "/blog" from "/blog/my-post")
+const subpath = pathname.match(/[^\/]+/g);
+const activePath = '/' + (subpath?.[0] || '');
 ---
 
 <header>
   <nav>
-    <!-- 3. Replaced the <h2> text with this logo link -->
-    <a href="/" class="logo-link">
-      <Image src={logo} alt={SITE_TITLE + " Logo"} />
+    <a href={import.meta.env.BASE_URL + '/'} class="logo-link">
+      <Image src={logo} alt={SITE_TITLE + ' Logo'} />
     </a>
 
     <!-- This is the new hamburger menu button -->
@@ -28,11 +32,27 @@ import logo from '../assets/logo.png';
     </button>
 
     <div class="internal-links">
-      <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="/about">About Mindware</HeaderLink>
-      <HeaderLink href="/services">Programs</HeaderLink>
-      <HeaderLink href="/blog">Blog</HeaderLink>
-      <HeaderLink href="/contact">Contact</HeaderLink>
+      <!-- REPLACED <HeaderLink> with <a> tags and fixed href/active logic -->
+      <a 
+        href={import.meta.env.BASE_URL + '/'} 
+        class:list={[{ active: pathname === '/' }]}
+      >Home</a>
+      <a 
+        href={import.meta.env.BASE_URL + '/about'} 
+        class:list={[{ active: activePath === '/about' }]}
+      >About Mindware</a>
+      <a 
+        href={import.meta.env.BASE_URL + '/services'} 
+        class:list={[{ active: activePath === '/services' }]}
+      >Programs</a>
+      <a 
+        href={import.meta.env.BASE_URL + '/blog'} 
+        class:list={[{ active: activePath === '/blog' }]}
+      >Blog</a>
+      <a 
+        href={import.meta.env.BASE_URL + '/contact'} 
+        class:list={[{ active: activePath === '/contact' }]}
+      >Contact</a>
     </div>
     <div class="social-links">
       <!-- Instagram -->

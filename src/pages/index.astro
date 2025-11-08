@@ -103,7 +103,11 @@ import client20 from '../assets/client20.png';
 
       <!-- Hero Content -->
       <div class="container">
-        <h1>Transformational Corporate Training</h1>
+        <h1>
+          Transformational
+          <span class="highlight-serif-bold">Corporate</span>
+           Training
+        </h1>
         <p class="subtitle">
           We empower organizations by creating customized, action-based, and
           highly result-oriented training programs.
@@ -313,37 +317,34 @@ import client20 from '../assets/client20.png';
     z-index: 1;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
   }
+  /* NEW: Style for the Hero H1 */
+  .hero h1 {
+    font-family: 'Merriweather', 'Atkinson', serif;
+    font-weight: 700;
+  }
 
   /* === 2. ABOUT BLURB: ANIMATED CARD (Unchanged) === */
   .about-blurb .container {
-    /* Remove padding so the card can be full-width if needed */
     padding: 4rem 0;
   }
-
   .about-card {
-    /* This is the new animated card */
     position: relative;
-    overflow: hidden; /* This keeps the bubbles inside the card */
-    background-color: var(--color-text-body); /* D_Grey background */
+    overflow: hidden; 
+    background-color: var(--color-text-body); 
     border-radius: 12px;
     padding: 4rem;
     max-width: 900px;
     margin: 0 auto;
     border: 1px solid var(--color-text-light);
   }
-
   .about-card-content {
-    /* Sits on top of the bubbles */
     position: relative;
     z-index: 2;
   }
-
-  /* Ensure text inside the card is white */
   .about-card h2,
   .about-card p {
     color: var(--color-bg);
   }
-
   .bubble-background {
     position: absolute;
     top: 0;
@@ -372,7 +373,6 @@ import client20 from '../assets/client20.png';
       opacity: 0;
     }
   }
-  /* Vary bubble properties */
   .bubble-background i:nth-child(1) { left: 10%; animation-duration: 20s; width: 30px; height: 30px; }
   .bubble-background i:nth-child(2) { left: 20%; animation-duration: 15s; animation-delay: 2s; width: 50px; height: 50px; }
   .bubble-background i:nth-child(3) { left: 30%; animation-duration: 22s; animation-delay: 5s; }
@@ -388,13 +388,11 @@ import client20 from '../assets/client20.png';
   /* === 3. SERVICE CARDS: VIBRANT COLORS (Unchanged) === */
   .services-preview .service-card {
     border: none;
-    color: var(--color-bg); /* CHANGED: Make text white */
+    color: var(--color-bg); 
   }
-
   .services-preview .service-card h3 {
-    color: var(--color-bg); /* CHANGED: Make h3 white */
+    color: var(--color-bg); 
   }
-
   .services-preview .service-card:nth-child(1) {
     background-color: var(--color-accent); /* Info Blue */
   }
@@ -403,13 +401,13 @@ import client20 from '../assets/client20.png';
   }
   .services-preview .service-card:nth-child(3) {
     background-color: var(--color-secondary); /* Secondary Yellow */
-    color: var(--color-primary); /* Use dark text on yellow bg */
+    color: var(--color-primary); 
   }
   .services-preview .service-card:nth-child(3) h3 {
-     color: var(--color-primary); /* Use dark text on yellow bg */
+     color: var(--color-primary); 
   }
 
-  /* === 4. CLIENT TRUST: SCROLLER & BG (UPDATED CSS) === */
+  /* === 4. CLIENT TRUST: SCROLLER & BG (UPDATED) === */
 
   @keyframes scrollLeft {
     from { transform: translateX(0); }
@@ -425,8 +423,10 @@ import client20 from '../assets/client20.png';
   .clients-trust {
     position: relative;
     overflow: hidden;
+    background-color: var(--color-bg); /* CHANGED: White background */
   }
 
+  /* New subtle animated background */
   .clients-trust::before {
     content: '';
     position: absolute;
@@ -435,20 +435,29 @@ import client20 from '../assets/client20.png';
     width: 100%;
     height: 100%;
     z-index: 0;
+    /* CHANGED: Subtle white/silver gradient */
     background: linear-gradient(
       90deg,
-      var(--color-primary),
-      var(--color-text-body),
-      var(--color-primary)
+      var(--color-bg),
+      var(--color-bg-light),
+      var(--color-bg)
     );
     background-size: 200% 200%;
     animation: animatedGradient 25s ease infinite;
-    opacity: 0.5;
+    opacity: 1; /* It's very subtle, so 1 is fine */
   }
 
   .clients-trust .container {
     position: relative;
     z-index: 1;
+  }
+  
+  /* NEW: Make text dark on the new white background */
+  .clients-trust .container h2 {
+    color: var(--color-primary);
+  }
+  .clients-trust .container p {
+    color: var(--color-text-body);
   }
 
   .logo-scroller-container {
@@ -464,22 +473,21 @@ import client20 from '../assets/client20.png';
   }
   
   .scroll-left {
-    animation: scrollLeft 60s linear infinite; /* Slowed down for more logos */
+    animation: scrollLeft 60s linear infinite; 
   }
   
   .scroll-right {
-    animation: scrollLeft 70s linear infinite reverse; /* Slowed down for more logos */
+    animation: scrollLeft 70s linear infinite reverse; 
   }
 
-  /* UPDATED: This now styles the <Image> component */
   .client-logo-item {
-    max-height: 75px; /* CHANGED: Was fixed 'height' */
-    height: auto; /* ADDED: Let height be natural */
-    width: auto;  /* Let width adjust automatically */
-    max-width: 200px; /* Kept max-width */
-    object-fit: contain; /* Ensure logo fits, doesn't stretch */
-    padding: 0 3rem; /* Increased spacing */
+    max-height: 75px; /* CHANGED: Use max-height for flexibility */
+    height: auto; /* ADDED */
+    width: auto;  
+    max-width: 200px; 
+    object-fit: contain; 
+    padding: 0 3rem; 
     /* filter: brightness(0) invert(1); REMOVED */
-    opacity: 1; /* Make logos fully visible */
+    opacity: 1; /* CHANGED: Full opacity */
   }
 </style>

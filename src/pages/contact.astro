@@ -1,36 +1,267 @@
 ---
-// src/pages/contact.astro
-
-// 1. Import all the components needed to build the page
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
     <BaseHead
       title="Contact Us"
-      description="Get in touch with the Mindware team to schedule a consultation."
+      description="Let's talk. Get in touch with the Mindware team."
     />
   </head>
   <body>
     <Header />
 
-    <main>
-      <h1>Contact Us</h1>
-      <p>
-        We'd love to hear from you. Please reach out to schedule a consultation
-        or ask any questions you may have.
-      </p>
+    <!-- === NEW ACTION CARDS SECTION === -->
+    <section class="action-cards">
+      <div class="container action-grid">
+        <!-- Card 1: Schedule a Call -->
+        <div class="action-card">
+          <div class="action-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <h3>Schedule a Call</h3>
+          <p>Book a phone call with our team at your convenient time.</p>
+          <!-- This can link to a Calendly or other scheduling service -->
+          <a href="#" class="cta-button-blue">Call Now</a>
+        </div>
 
-      <ul>
-        <li><strong>Email:</strong> info@mindware.com</li>
-        <li><strong>Phone:</strong> +91 12345 67890</li>
-      </ul>
-      
-      </main>
+        <!-- Card 2: WhatsApp Us -->
+        <div class="action-card">
+          <div class="action-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          </div>
+          <h3>WhatsApp Us</h3>
+          <p>Chat with us instantly on WhatsApp for quick responses.</p>
+          <!-- This should link to your WhatsApp business number -->
+          <a href="https://wa.me/9822268333" target="_blank" class="cta-button-blue">Open WhatsApp</a>
+        </div>
+
+        <!-- Card 3: Email Us -->
+        <div class="action-card">
+          <div class="action-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </div>
+          <h3>Email Us</h3>
+          <p>Send us your requirements and queries via email.</p>
+          <!-- This opens the user's default email client -->
+          <a href="mailto:shyam@thempoweredmind.in" class="cta-button-blue">Send Email</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- === UPDATED CONTACT SECTION === -->
+    <section class="contact-page">
+      <div class="container">
+        <!-- UPDATED: This grid is now Info (Left) and Map (Right) -->
+        <div class="contact-grid">
+          <!-- MOVED: Info is now the left column -->
+          <div class="contact-info-wrapper">
+            <h2>Contact Information</h2>
+            <div class="info-block">
+              <!-- Location Icon -->
+              <div class="info-block-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="info-block-text">
+                <h4>Address</h4>
+                <p>
+                  B2-504, SilverOak Society, East Avenue, Kalyani Nagar, Pune
+                  411014
+                </p>
+                <p>Centres: Law College Road, Bund Garden & Baner.</p>
+              </div>
+            </div>
+
+            <div class="info-block">
+              <!-- Phone Icon -->
+              <div class="info-block-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="info-block-text">
+                <h4>Phone</h4>
+                <p>+9822268333</p>
+              </div>
+            </div>
+
+            <div class="info-block">
+              <!-- Email Icon -->
+              <div class="info-block-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="info-block-text">
+                <h4>Email</h4>
+                <p>shyam@thempoweredmind.in</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- MOVED: Map is now the right column -->
+          <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.353342371911!2d73.8966143148933!3d18.55831998738733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c13e5630c69d%3A0xebed4c4c51659b8b!2sMindware!5e0!3m2!1sen!2sin!4v1619420608753!5m2!1sen!2sin"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <Footer />
   </body>
 </html>
+
+<style>
+  /* Use the same container as the homepage */
+  .container {
+    width: 1100px;
+    max-width: calc(100% - 4rem);
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  /* === NEW ACTION CARDS STYLING === */
+  .action-cards {
+    background-color: var(--color-primary); /* Darkest background */
+  }
+  .action-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .action-card {
+    background: linear-gradient(145deg, var(--color-accent), var(--color-accent-dark));
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: center;
+    color: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .action-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  .action-card h3 {
+    color: var(--color-bg);
+    margin-bottom: 0.5rem;
+  }
+  .action-card p {
+    color: var(--color-bg-light);
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Makes cards equal height */
+  }
+  .cta-button-blue {
+    display: inline-block;
+    background-color: var(--color-bg); /* White button */
+    color: var(--color-accent); /* Blue text */
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  .cta-button-blue:hover {
+    background-color: var(--color-bg-light);
+    transform: translateY(-2px);
+  }
+
+  /* === UPDATED CONTACT SECTION === */
+  .contact-page {
+    background-color: var(--color-text-body); /* D_Grey background */
+  }
+
+  .contact-grid {
+    display: grid;
+    /* UPDATED: Info on left, map on right */
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: flex-start; /* Align tops */
+  }
+
+  /* Contact Info Styling */
+  .contact-info-wrapper {
+    /* This brace was missing */
+  }
+  .contact-info-wrapper h2 {
+    color: var(--color-bg);
+    margin-bottom: 2rem;
+    font-size: 36px; /* Match h2 style */
+  }
+  .info-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem; /* Increased gap */
+    margin-bottom: 2.5rem; /* Increased spacing */
+  }
+  .info-block-icon {
+    color: var(--color-accent); /* Info Blue */
+    flex-shrink: 0;
+    margin-top: 5px; /* Adjusted alignment */
+  }
+  /* NEW: Style for icon SVG */
+  .info-block-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+  .info-block-text h4 {
+    margin: 0 0 0.5rem 0; /* Added bottom margin */
+    color: var(--color-bg);
+    font-size: 28px; /* Increased font size */
+  }
+  .info-block-text p {
+    margin: 0;
+    color: var(--color-bg); /* CHANGED to white */
+    line-height: 1.6;
+    font-size: 1.1rem; /* Increased font size */
+  }
+
+  /* Map Styling */
+  .map-container {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 0; 
+  }
+  .map-container iframe {
+    width: 100%;
+    height: 450px; /* Made map taller */
+    border: 0;
+    /* Dark Mode filter for map */
+    filter: invert(90%) hue-rotate(180deg) brightness(1.2);
+  }
+
+  /* Responsive Tweaks */
+  @media (max-width: 900px) {
+    /* UPDATED: Stack both grids */
+    .action-grid,
+    .contact-grid {
+      grid-template-columns: 1fr; /* Stack on mobile */
+    }
+  }
+
+  @media (max-width: 720px) {
+    .container {
+      max-width: calc(100% - 2rem);
+      padding: 3rem 1rem;
+    }
+    .info-block-text h4 {
+      font-size: 24px;
+    }
+    .info-block-text p {
+      font-size: 1rem;
+    }
+  }
+</style>

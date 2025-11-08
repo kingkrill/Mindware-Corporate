@@ -7,17 +7,20 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
+// This is now a simple object. All errors are gone.
 export default defineConfig({
+  // This is for the live GitHub Pages site
+  site: 'https://kingkrill.github.io',
   
-  // 1. REPLACE this line
-  site: 'https://kingkrill.github.io',
-
-  // 2. ADD this line
+  // This tells Astro to build all links relative to this subfolder.
+  // This will fix your font errors.
   base: '/Mindware-Corporate',
 
-  integrations: [mdx(), sitemap()],
+  // Your integrations
+  integrations: [mdx(), sitemap()],
 
-  vite: {
-    plugins: [tailwindcss()],
-  },
+  // Your Vite config
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
