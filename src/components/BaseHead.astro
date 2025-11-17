@@ -1,23 +1,22 @@
 ---
-// src/components/BaseHead.astro
-
 // Import the global.css file here
 import '../styles/global.css';
 import type { ImageMetadata } from 'astro';
-import FallbackImage from '../assets/blog-placeholder-1.jpg';
+// UPDATED #1: Changed this to import your new social card
+import FallbackImage from '../assets/social-card.png'; 
 import { SITE_TITLE } from '../consts';
+// UPDATED #2: Import your new favicon
+import newFavicon from '../assets/favicon.png';
 
-// Props interface
 interface Props {
-  title: string;
-  description: string;
-  image?: ImageMetadata;
-  isBlog?: boolean; // <-- FIX: Added this new prop
+  title: string;
+  description: string;
+  image?: ImageMetadata;
+  isBlog?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-// Get props with defaults
 const {
   title,
   description,
@@ -25,51 +24,65 @@ const {
   isBlog = false,
 } = Astro.props;
 
-// <-- FIX: You were missing this line
 const formattedTitle = `${title} | ${SITE_TITLE}`;
 ---
 
+<!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- UPDATED #3: Changed this link to point to your new favicon -->
+<link rel="icon" type="image/png" href={newFavicon.src} />
+
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link
-  rel="alternate"
-  type="application/rss+xml"
-  title={SITE_TITLE}
-  href={new URL('rss.xml', Astro.site)}
+  rel="alternate"
+  type="application/rss+xml"
+  title={SITE_TITLE}
+  href={new URL('rss.xml', Astro.site)}
 />
 <meta name="generator" content={Astro.generator} />
 
+<!-- Font preloads -->
 <link
-  rel="preload"
-  href="/fonts/atkinson-regular.woff"
-  as="font"
-  type="font/woff"
-  crossorigin
+  rel="preload"
+  href="/fonts/atkinson-regular.woff"
+  as="font"
+  type="font/woff"
+  crossorigin
 />
 <link
-  rel="preload"
-  href="/fonts/atkinson-bold.woff"
-  as="font"
-  type="font/woff"
-  crossorigin
+  rel="preload"
+  href="/fonts/atkinson-bold.woff"
+  as="font"
+  type="font/woff"
+  crossorigin
 />
 
+<!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
+<!-- Primary Meta Tags -->
 <title>{formattedTitle}</title>
 <meta name="title" content={formattedTitle} />
 <meta name="description" content={description} />
 
+<!-- Open Graph / Facebook -->
 <meta property="og:type" content={isBlog ? 'article' : 'website'} />
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={formattedTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image.src, Astro.site)} />
 
+<!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={canonicalURL} />
 <meta property="twitter:title" content={formattedTitle} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image.src, Astro.site)} />
+
+<!-- 
+  Add your analytics script here
+  (e.g., Google Analytics, Plausible, Fathom)
+-->
+<!-- <script async defer src="..."></script> -->
