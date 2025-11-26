@@ -4,16 +4,9 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { Image } from 'astro:assets';
 
-// --- ACTION REQUIRED ---
-// You must download these images from the Mindware website
-// and place them in your 'src/assets/' folder
-// with these exact filenames.
-
 // Founders
 import aninditaPhoto from '../assets/anindita.jpg';
 import shyamPhoto from '../assets/shyam.jpg';
-
-// REMOVED all other team member imports
 ---
 
 <!doctype html>
@@ -27,11 +20,10 @@ import shyamPhoto from '../assets/shyam.jpg';
   <body>
     <Header />
 
-    <!-- === ABOUT HERO (UPDATED) === -->
+    <!-- === ABOUT HERO === -->
     <section class="about-hero">
       <div class="container">
         <h1>About Us</h1>
-        <!-- <p class="subtitle">Our mission, vision, and the team that makes it possible.</p> --> <!-- REMOVED -->
       </div>
     </section>
 
@@ -60,22 +52,36 @@ import shyamPhoto from '../assets/shyam.jpg';
       <div class="container">
         <h2>Meet Our Founders</h2>
         <div class="founders-grid">
-          <!-- Anindita Garg -->
+          
+          <!-- Anindita Garg (UPDATED from PDF) -->
           <div class="founder-card">
             <Image src={aninditaPhoto} alt="Anindita Garg" class="founder-img" />
             <div class="founder-info">
               <h3>Anindita Garg</h3>
-              <h4>Co-Founder, Director</h4>
+              <h4>Founder & Director | Corporate Productivity Expert</h4>
+              
               <p>
-                Anindita is a Certified Trainer from American Tesol, an NLP Practitioner,
-                and a Certified DMIT Counselor. With a rich experience of 18 years in
-                training, she has touched over 1,50,000 lives. Her passion is to
-                transform people's lives, and she is known for her highly
-                interactive, informative, and energetic training sessions.
+                Anindita is a renowned coach and mentor with over <strong>25 years of experience</strong> in behavioral transformation and training excellence. She has positively impacted over <strong>125,000 learners globally</strong>, helping professionals enhance focus, productivity, and personal effectiveness.
+              </p>
+              
+              <p class="founder-highlight">
+                Trained under <strong>Dr. Howard Gardner (Harvard University)</strong> in Multiple Intelligence Theory and an alumna of the <strong>Indian School of Business (ISB)</strong>.
+              </p>
+
+              <ul class="founder-achievements">
+                <li><strong>"Woman of Substance"</strong> – Times of India</li>
+                <li><strong>Maharashtra Ratan Gaurav</strong> – Visionary Youth Mentor</li>
+                <li><strong>Agar Samman Award</strong> – Training & Development</li>
+                <li>Featured as a <strong>"Wonder Woman"</strong> by a leading business magazine</li>
+              </ul>
+
+              <p class="philosophy">
+                <em>"Refusing to Give Up is Equal to Victory."</em>
               </p>
             </div>
           </div>
-          <!-- Shyam Garg -->
+
+          <!-- Shyam Garg (Original) -->
           <div class="founder-card">
             <Image src={shyamPhoto} alt="Shyam Garg" class="founder-img" />
             <div class="founder-info">
@@ -87,14 +93,13 @@ import shyamPhoto from '../assets/shyam.jpg';
                 Counselor. He has successfully conducted over 3000 workshops for
                 corporates, schools, and individuals. His mission is to empower
                 people to unlock their true potential.
-              </Two>
+              </p>
             </div>
           </div>
+
         </div>
       </div>
     </section>
-
-    <!-- === OUR TEAM SECTION (REMOVED) === -->
 
     <Footer />
   </body>
@@ -120,12 +125,6 @@ import shyamPhoto from '../assets/shyam.jpg';
   }
   .about-hero h1 {
     color: var(--color-bg); /* White */
-  }
-  .about-hero .subtitle {
-    font-size: 1.25rem;
-    color: var(--color-bg-light); /* Silver */
-    max-width: 800px;
-    margin: 0 auto;
   }
 
   /* === Mission & Vision === */
@@ -161,44 +160,73 @@ import shyamPhoto from '../assets/shyam.jpg';
   }
   .founders-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Single column on mobile */
+    grid-template-columns: 1fr; /* Single column */
     gap: 3rem;
     margin-top: 3rem;
   }
   .founder-card {
     display: grid;
-    grid-template-columns: 200px 1fr; /* Image | Text */
-    gap: 2rem;
+    grid-template-columns: 250px 1fr; /* Image | Text */
+    gap: 3rem;
     background-color: var(--color-text-body);
     border-radius: 12px;
     overflow: hidden;
+    border: 1px solid var(--color-text-light);
   }
   .founder-img {
-    width: 200px;
+    width: 100%;
     height: 100%;
     object-fit: cover;
+    min-height: 300px;
   }
   .founder-info {
-    padding: 2rem 2rem 2rem 0;
+    padding: 3rem 3rem 3rem 0;
   }
   .founder-info h3 {
     text-align: left;
     color: var(--color-bg);
+    margin-bottom: 0.5rem;
   }
   .founder-info h4 {
     text-align: left;
     color: var(--color-secondary); /* Yellow */
     font-weight: 400;
-    font-style: italic;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
   }
   .founder-info p {
     color: var(--color-bg-light);
     font-size: 1rem;
     line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  /* New Styles for Founder Details */
+  .founder-highlight {
+    color: var(--color-bg) !important; /* Make this text pop (white) */
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .founder-achievements {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-bg-light);
+  }
+  .founder-achievements li {
+    margin-bottom: 0.5rem;
+  }
+  .founder-achievements strong {
+    color: var(--color-accent); /* Highlight awards in Blue */
   }
 
-  /* === Team (REMOVED) === */
+  .philosophy {
+    font-size: 1.1rem !important;
+    color: var(--color-secondary) !important; /* Yellow */
+    border-left: 3px solid var(--color-secondary);
+    padding-left: 1rem;
+    margin-top: 2rem;
+  }
 
   /* === Responsive Tweaks === */
   @media (max-width: 900px) {
@@ -211,14 +239,17 @@ import shyamPhoto from '../assets/shyam.jpg';
     }
     .founder-img {
       width: 100%;
-      height: 300px;
+      height: 400px; /* Taller image on mobile */
     }
     .founder-info {
-      padding: 0 2rem 2rem 2rem;
+      padding: 2rem;
     }
     .founder-info h3,
     .founder-info h4 {
       text-align: center;
+    }
+    .philosophy {
+      text-align: left; /* Keep quote readable */
     }
   }
 
