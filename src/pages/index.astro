@@ -3,10 +3,9 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
-// 1. Import the <Image /> component for your carousel
 import { Image } from 'astro:assets';
 
-/* 2. Import your hero images */
+/* Import Images */
 import carousel1 from '../assets/carousel1.jpeg';
 import carousel2 from '../assets/carousel2.jpeg';
 import carousel3 from '../assets/carousel3.jpeg';
@@ -23,7 +22,6 @@ import carousel13 from '../assets/carousel13.jpeg';
 import carousel14 from '../assets/carousel14.jpeg';
 import carousel15 from '../assets/carousel15.jpeg';
 
-/* 3. NEW: Import your client logos */
 import client1 from '../assets/client1.png';
 import client2 from '../assets/client2.png';
 import client3 from '../assets/client3.png';
@@ -44,6 +42,9 @@ import client17 from '../assets/client17.png';
 import client18 from '../assets/client18.png';
 import client19 from '../assets/client19.png';
 import client20 from '../assets/client20.png';
+
+/* Logo for Graph */
+import logo from '../assets/logo.png';
 ---
 
 <!doctype html>
@@ -58,50 +59,43 @@ import client20 from '../assets/client20.png';
     <section class="hero">
       <div class="scrolling-collage-bg">
         <div class="collage-column">
-          <!-- Column 1 Images -->
-          <Image src={carousel1} alt="Corporate training session" loading="lazy" />
-          <Image src={carousel2} alt="Leadership workshop" loading="lazy" />
-          <Image src={carousel3} alt="Team building event" loading="lazy" />
-          <Image src={carousel4} alt="Professional growth seminar" loading="lazy" />
-          <Image src={carousel5} alt="Business strategy meeting" loading="lazy" />
-          <!-- Duplicates for seamless loop -->
-          <Image src={carousel1} alt="Corporate training session" loading="lazy" />
-          <Image src={carousel2} alt="Leadership workshop" loading="lazy" />
-          <Image src={carousel3} alt="Team building event" loading="lazy" />
-          <Image src={carousel4} alt="Professional growth seminar" loading="lazy" />
-          <Image src={carousel5} alt="Business strategy meeting" loading="lazy" />
+          <Image src={carousel1} alt="Training" loading="lazy" />
+          <Image src={carousel2} alt="Training" loading="lazy" />
+          <Image src={carousel3} alt="Training" loading="lazy" />
+          <Image src={carousel4} alt="Training" loading="lazy" />
+          <Image src={carousel5} alt="Training" loading="lazy" />
+          <Image src={carousel1} alt="Training" loading="lazy" />
+          <Image src={carousel2} alt="Training" loading="lazy" />
+          <Image src={carousel3} alt="Training" loading="lazy" />
+          <Image src={carousel4} alt="Training" loading="lazy" />
+          <Image src={carousel5} alt="Training" loading="lazy" />
         </div>
         <div class="collage-column">
-          <!-- Column 2 Images -->
-          <Image src={carousel6} alt="Success metrics" loading="lazy" />
-          <Image src={carousel7} alt="Focus group" loading="lazy" />
-          <Image src={carousel8} alt="Innovation workshop" loading="lazy" />
-          <Image src={carousel9} alt="Taking action" loading="lazy" />
-          <Image src={carousel10} alt="Mindware event" loading="lazy" />
-          <!-- Duplicates for seamless loop -->
-          <Image src={carousel6} alt="Success metrics" loading="lazy" />
-          <Image src={carousel7} alt="Focus group" loading="lazy" />
-          <Image src={carousel8} alt="Innovation workshop" loading="lazy" />
-          <Image src={carousel9} alt="Taking action" loading="lazy" />
-          <Image src={carousel10} alt="Mindware event" loading="lazy" />
+          <Image src={carousel6} alt="Training" loading="lazy" />
+          <Image src={carousel7} alt="Training" loading="lazy" />
+          <Image src={carousel8} alt="Training" loading="lazy" />
+          <Image src={carousel9} alt="Training" loading="lazy" />
+          <Image src={carousel10} alt="Training" loading="lazy" />
+          <Image src={carousel6} alt="Training" loading="lazy" />
+          <Image src={carousel7} alt="Training" loading="lazy" />
+          <Image src={carousel8} alt="Training" loading="lazy" />
+          <Image src={carousel9} alt="Training" loading="lazy" />
+          <Image src={carousel10} alt="Training" loading="lazy" />
         </div>
         <div class="collage-column">
-          <!-- Column 3 Images -->
-          <Image src={carousel11} alt="Clarity in goals" loading="lazy" />
-          <Image src={carousel12} alt="Growth mindset" loading="lazy" />
-          <Image src={carousel13} alt="Business results" loading="lazy" />
-          <Image src={carousel14} alt="Company culture" loading="lazy" />
-          <Image src={carousel15} alt="Presentation" loading="lazy" />
-          <!-- Duplicates for seamless loop -->
-          <Image src={carousel11} alt="Clarity in goals" loading="lazy" />
-          <Image src={carousel12} alt="Growth mindset" loading="lazy" />
-          <Image src={carousel13} alt="Business results" loading="lazy" />
-          <Image src={carousel14} alt="Company culture" loading="lazy" />
-          <Image src={carousel15} alt="Presentation" loading="lazy" />
+          <Image src={carousel11} alt="Training" loading="lazy" />
+          <Image src={carousel12} alt="Training" loading="lazy" />
+          <Image src={carousel13} alt="Training" loading="lazy" />
+          <Image src={carousel14} alt="Training" loading="lazy" />
+          <Image src={carousel15} alt="Training" loading="lazy" />
+          <Image src={carousel11} alt="Training" loading="lazy" />
+          <Image src={carousel12} alt="Training" loading="lazy" />
+          <Image src={carousel13} alt="Training" loading="lazy" />
+          <Image src={carousel14} alt="Training" loading="lazy" />
+          <Image src={carousel15} alt="Training" loading="lazy" />
         </div>
       </div>
 
-      <!-- Hero Content -->
       <div class="container">
         <h1>
           Transformational
@@ -116,29 +110,123 @@ import client20 from '../assets/client20.png';
       </div>
     </section>
 
-    <!-- === ABOUT BLURB === -->
-    <section class="about-blurb">
+    <!-- === NEW: EXTRAORDINARY RESULTS SECTION === -->
+    <section class="results-section">
       <div class="container">
-        <!-- 
-          This "about-card" is now the animated card.
-          The bubble animation is contained *inside* it.
-        -->
-        <div class="about-card">
-          <!-- Animated Bubble Background -->
-          <div class="bubble-background">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-          </div>
+        <div class="results-card">
+          <h2 class="section-title center-title" style="color: var(--color-primary);">WE SURPASS OUR CLIENTS EXPECTATIONS</h2>
+          <div class="title-underline center-underline"></div>
+          <p class="results-intro">
+            These are just a few of the <strong style="color: var(--color-accent);">breakthrough results</strong> our clients have achieved:
+          </p>
 
-          <!-- About Content (sits on top of bubbles) -->
-          <div class="about-card-content">
-            <h2>Who We Are</h2>
-            <p>
-              Mindware is a leader in corporate, school, and personal
-              transformational training. Our passionate team is dedicated to
-              inspiring lives and transforming people through practical,
-              action-based programs.
-            </p>
-            <a href="/about" class="secondary-button">Learn More About Us</a>
+          <div class="stats-grid">
+            <!-- Stat 1 -->
+            <div class="stat-item">
+              <div class="stat-number" data-target="83">0%</div>
+              <div class="stat-label">INCREASE</div>
+              <div class="stat-desc">in productivity and communication with Italian Executives</div>
+              <div class="stat-client">Italian auto manufacturer's Indian operation</div>
+            </div>
+            <!-- Stat 2 -->
+            <div class="stat-item">
+              <div class="stat-number" data-target="25">0%</div>
+              <div class="stat-label">REDUCTION</div>
+              <div class="stat-desc">in attrition</div>
+              <div class="stat-client">Leading US Based GPU Manufacturer</div>
+            </div>
+            <!-- Stat 3 -->
+            <div class="stat-item">
+              <div class="stat-number" data-target="65">0%</div>
+              <div class="stat-label">INCREASE</div>
+              <div class="stat-desc">in efficiency in the entire organisation</div>
+              <div class="stat-client">Leading Pune real estate development company</div>
+            </div>
+            <!-- Stat 4 -->
+            <div class="stat-item">
+              <div class="stat-number" data-target="78">0%</div>
+              <div class="stat-label">INCREASE</div>
+              <div class="stat-desc">in client retention</div>
+              <div class="stat-client">National steelworks company</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- === BEYOND PREDICTABLE SECTION === -->
+    <section class="performance-section">
+      <div class="container">
+        <div class="performance-card">
+          <div class="card-bg-animation"></div>
+          
+          <div class="performance-grid">
+            <!-- Left: Content -->
+            <div class="performance-content">
+              <h2 class="section-title">BEYOND PREDICTABLE</h2>
+              <div class="title-underline"></div>
+              
+              <p>
+                At Mindware, our purpose is to enable our clients to produce long-lasting, 
+                breakthrough results that go far beyond the predictable.
+              </p>
+              <p>
+                Our fundamental core competency is generating <strong>organizational alignment</strong> 
+                as the access to breakthrough results.
+              </p>
+              <p>
+                Mindware has been successfully causing organizational alignment for over 
+                two decades. Working with diverse clients across industries, we know that 
+                our unique transformational training approach delivers the desirable results 
+                our clients are looking to accomplish.
+              </p>
+              
+              <div class="performance-cta">
+                <a href="/about" class="secondary-button">Learn More About Us</a>
+              </div>
+            </div>
+
+            <!-- Right: Graph -->
+            <div class="performance-graph">
+              
+              <div class="svg-graph-wrapper">
+                <!-- Logo Overlay -->
+                <div class="logo-overlay">
+                  <Image src={logo} alt="Mindware Logo" class="graph-logo-img" />
+                  <span class="graph-logo-text">Effect</span>
+                </div>
+
+                <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid meet" class="main-chart-svg">
+                  <!-- Desirable Curve -->
+                  <path d="M20,200 Q200,180 390,50" 
+                        fill="none" stroke="white" stroke-width="4" stroke-dasharray="10,10" />
+                  
+                  <!-- Predictable Curve -->
+                  <path d="M20,200 L390,180" 
+                        fill="none" stroke="white" stroke-width="4" stroke-dasharray="10,10" opacity="0.6" />
+
+                  <!-- Start Dots -->
+                  <circle cx="20" cy="200" r="10" fill="#EAD01F" />
+                  
+                  <!-- End Dots -->
+                  <circle cx="390" cy="50" r="10" fill="#EAD01F" />
+                  <circle cx="390" cy="180" r="10" fill="#EAD01F" />
+
+                  <!-- Text Labels -->
+                  <text x="190" y="80" fill="white" font-weight="bold" font-family="sans-serif" font-size="14">DESIRABLE</text>
+                  <text x="190" y="220" fill="white" font-weight="bold" font-family="sans-serif" font-size="14" opacity="0.8">PREDICTABLE</text>
+
+                  <!-- Arrow Line -->
+                  <line x1="375" y1="65" x2="375" y2="165" stroke="white" stroke-width="2" marker-end="url(#arrowhead)" marker-start="url(#arrowhead)" />
+                  
+                  <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                      <polygon points="0 0, 10 3.5, 0 7" fill="white" />
+                    </marker>
+                  </defs>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -148,9 +236,6 @@ import client20 from '../assets/client20.png';
     <section class="services-preview">
       <div class="container">
         <h2>Our Core Programs</h2>
-        <!-- 
-          Cards are now colored by vibrant CSS rules.
-        -->
         <div class="services-grid">
           <div class="service-card">
             <h3>Leadership Development</h3>
@@ -180,7 +265,7 @@ import client20 from '../assets/client20.png';
       </div>
     </section>
 
-    <!-- === CLIENT TRUST SECTION (UPDATED) === -->
+    <!-- === CLIENT TRUST SECTION (FULL WIDTH) === -->
     <section class="clients-trust">
       <div class="container">
         <h2>Trusted By Leading Organizations</h2>
@@ -188,66 +273,60 @@ import client20 from '../assets/client20.png';
           We are proud to have partnered with companies of all sizes to empower
           their teams.
         </p>
-        
-        <!-- UPDATED: Logo Scroller Container -->
-        <div class="logo-scroller-container">
-          <!-- Row 1: Scrolls Left -->
-          <div class="logo-scroller scroll-left">
-            <!-- Replaced <span> tags with <Image /> components -->
-            <Image src={client1} alt="Client 1 Logo" class="client-logo-item" />
-            <Image src={client2} alt="Client 2 Logo" class="client-logo-item" />
-            <Image src={client3} alt="Client 3 Logo" class="client-logo-item" />
-            <Image src={client4} alt="Client 4 Logo" class="client-logo-item" />
-            <Image src={client5} alt="Client 5 Logo" class="client-logo-item" />
-            <Image src={client6} alt="Client 6 Logo" class="client-logo-item" />
-            <Image src={client7} alt="Client 7 Logo" class="client-logo-item" />
-            <Image src={client8} alt="Client 8 Logo" class="client-logo-item" />
-            <Image src={client9} alt="Client 9 Logo" class="client-logo-item" />
-            <Image src={client10} alt="Client 10 Logo" class="client-logo-item" />
-            <!-- Duplicate the row for seamless loop -->
-            <Image src={client1} alt="Client 1 Logo" class="client-logo-item" />
-            <Image src={client2} alt="Client 2 Logo" class="client-logo-item" />
-            <Image src={client3} alt="Client 3 Logo" class="client-logo-item" />
-            <Image src={client4} alt="Client 4 Logo" class="client-logo-item" />
-            <Image src={client5} alt="Client 5 Logo" class="client-logo-item" />
-            <Image src={client6} alt="Client 6 Logo" class="client-logo-item" />
-            <Image src={client7} alt="Client 7 Logo" class="client-logo-item" />
-            <Image src={client8} alt="Client 8 Logo" class="client-logo-item" />
-            <Image src={client9} alt="Client 9 Logo" class="client-logo-item" />
-            <Image src={client10} alt="Client 10 Logo" class="client-logo-item" />
-          </div>
-          
-          <!-- Row 2: Scrolls Right -->
-          <div class="logo-scroller scroll-right">
-            <!-- Replaced <span> tags with <Image /> components -->
-            <Image src={client11} alt="Client 11 Logo" class="client-logo-item" />
-            <Image src={client12} alt="Client 12 Logo" class="client-logo-item" />
-            <Image src={client13} alt="Client 13 Logo" class="client-logo-item" />
-            <Image src={client14} alt="Client 14 Logo" class="client-logo-item" />
-            <Image src={client15} alt="Client 15 Logo" class="client-logo-item" />
-            <Image src={client16} alt="Client 16 Logo" class="client-logo-item" />
-            <Image src={client17} alt="Client 17 Logo" class="client-logo-item" />
-            <Image src={client18} alt="Client 18 Logo" class="client-logo-item" />
-            <Image src={client19} alt="Client 19 Logo" class="client-logo-item" />
-            <Image src={client20} alt="Client 20 Logo" class="client-logo-item" />
-            <!-- Duplicate the row for seamless loop -->
-            <Image src={client11} alt="Client 11 Logo" class="client-logo-item" />
-            <Image src={client12} alt="Client 12 Logo" class="client-logo-item" />
-            <Image src={client13} alt="Client 13 Logo" class="client-logo-item" />
-            <Image src={client14} alt="Client 14 Logo" class="client-logo-item" />
-            <Image src={client15} alt="Client 15 Logo" class="client-logo-item" />
-            <Image src={client16} alt="Client 16 Logo" class="client-logo-item" />
-            <Image src={client17} alt="Client 17 Logo" class="client-logo-item" />
-            <Image src={client18} alt="Client 18 Logo" class="client-logo-item" />
-            <Image src={client19} alt="Client 19 Logo" class="client-logo-item" />
-            <Image src={client20} alt="Client 20 Logo" class="client-logo-item" />
-          </div>
+      </div>
+      
+      <div class="logo-scroller-container">
+        <div class="logo-scroller scroll-left">
+          <Image src={client1} alt="Client 1 Logo" class="client-logo-item" />
+          <Image src={client2} alt="Client 2 Logo" class="client-logo-item" />
+          <Image src={client3} alt="Client 3 Logo" class="client-logo-item" />
+          <Image src={client4} alt="Client 4 Logo" class="client-logo-item" />
+          <Image src={client5} alt="Client 5 Logo" class="client-logo-item" />
+          <Image src={client6} alt="Client 6 Logo" class="client-logo-item" />
+          <Image src={client7} alt="Client 7 Logo" class="client-logo-item" />
+          <Image src={client8} alt="Client 8 Logo" class="client-logo-item" />
+          <Image src={client9} alt="Client 9 Logo" class="client-logo-item" />
+          <Image src={client10} alt="Client 10 Logo" class="client-logo-item" />
+          <!-- Duplicate -->
+          <Image src={client1} alt="Client 1 Logo" class="client-logo-item" />
+          <Image src={client2} alt="Client 2 Logo" class="client-logo-item" />
+          <Image src={client3} alt="Client 3 Logo" class="client-logo-item" />
+          <Image src={client4} alt="Client 4 Logo" class="client-logo-item" />
+          <Image src={client5} alt="Client 5 Logo" class="client-logo-item" />
+          <Image src={client6} alt="Client 6 Logo" class="client-logo-item" />
+          <Image src={client7} alt="Client 7 Logo" class="client-logo-item" />
+          <Image src={client8} alt="Client 8 Logo" class="client-logo-item" />
+          <Image src={client9} alt="Client 9 Logo" class="client-logo-item" />
+          <Image src={client10} alt="Client 10 Logo" class="client-logo-item" />
         </div>
         
+        <div class="logo-scroller scroll-right">
+          <Image src={client11} alt="Client 11 Logo" class="client-logo-item" />
+          <Image src={client12} alt="Client 12 Logo" class="client-logo-item" />
+          <Image src={client13} alt="Client 13 Logo" class="client-logo-item" />
+          <Image src={client14} alt="Client 14 Logo" class="client-logo-item" />
+          <Image src={client15} alt="Client 15 Logo" class="client-logo-item" />
+          <Image src={client16} alt="Client 16 Logo" class="client-logo-item" />
+          <Image src={client17} alt="Client 17 Logo" class="client-logo-item" />
+          <Image src={client18} alt="Client 18 Logo" class="client-logo-item" />
+          <Image src={client19} alt="Client 19 Logo" class="client-logo-item" />
+          <Image src={client20} alt="Client 20 Logo" class="client-logo-item" />
+          <!-- Duplicate -->
+          <Image src={client11} alt="Client 11 Logo" class="client-logo-item" />
+          <Image src={client12} alt="Client 12 Logo" class="client-logo-item" />
+          <Image src={client13} alt="Client 13 Logo" class="client-logo-item" />
+          <Image src={client14} alt="Client 14 Logo" class="client-logo-item" />
+          <Image src={client15} alt="Client 15 Logo" class="client-logo-item" />
+          <Image src={client16} alt="Client 16 Logo" class="client-logo-item" />
+          <Image src={client17} alt="Client 17 Logo" class="client-logo-item" />
+          <Image src={client18} alt="Client 18 Logo" class="client-logo-item" />
+          <Image src={client19} alt="Client 19 Logo" class="client-logo-item" />
+          <Image src={client20} alt="Client 20 Logo" class="client-logo-item" />
+        </div>
       </div>
     </section>
 
-    <!-- === FINAL CALL TO ACTION (CTA) === -->
+    <!-- === FINAL CTA === -->
     <section class="final-cta">
       <div class="container">
         <h2>Ready to Empower Your Team?</h2>
@@ -261,7 +340,15 @@ import client20 from '../assets/client20.png';
 </html>
 
 <style>
-  /* === 1. HERO SECTION: COLLAGE (Unchanged) === */
+  /* --- GLOBAL FIXES --- */
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* --- 1. HERO --- */
   .hero {
     min-height: 100vh;
     position: relative;
@@ -269,6 +356,7 @@ import client20 from '../assets/client20.png';
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
   .scrolling-collage-bg {
     position: absolute;
@@ -279,215 +367,370 @@ import client20 from '../assets/client20.png';
     display: flex;
     gap: 1rem;
     z-index: 0;
-    opacity: 0.5; /* Increased opacity */
-    filter: grayscale(20%); /* Reduced grayscale */
+    opacity: 0.5; 
+    filter: grayscale(20%); 
   }
   .collage-column {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     flex-grow: 1;
-    min-width: 300px;
+    min-width: 0;
+    flex-basis: 0;
   }
   .collage-column img,
-  .collage-column :global(img) { /* Selects Astro <Image> component */
+  .collage-column :global(img) { 
     width: 100%;
     height: auto;
     border-radius: 8px;
+    object-fit: cover;
   }
-  @keyframes scrollUp {
-    from { transform: translateY(0); }
-    to { transform: translateY(-50%); }
-  }
-  @keyframes scrollDown {
-    from { transform: translateY(-50%); }
-    to { transform: translateY(0); }
-  }
-  .collage-column:nth-child(1) {
-    animation: scrollUp 60s linear infinite alternate;
-  }
-  .collage-column:nth-child(2) {
-    animation: scrollDown 70s linear infinite alternate;
-  }
-  .collage-column:nth-child(3) {
-    animation: scrollUp 50s linear infinite alternate;
-  }
+  @keyframes scrollUp { from { transform: translateY(0); } to { transform: translateY(-50%); } }
+  @keyframes scrollDown { from { transform: translateY(-50%); } to { transform: translateY(0); } }
+  
+  .collage-column:nth-child(1) { animation: scrollUp 60s linear infinite alternate; }
+  .collage-column:nth-child(2) { animation: scrollDown 70s linear infinite alternate; }
+  .collage-column:nth-child(3) { animation: scrollUp 50s linear infinite alternate; }
+  
   .hero .container {
     position: relative;
     z-index: 1;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    width: 100%;
+    box-sizing: border-box;
   }
-  /* NEW: Style for the Hero H1 */
   .hero h1 {
     font-family: 'Merriweather', 'Atkinson', serif;
     font-weight: 700;
   }
 
-  /* === 2. ABOUT BLURB: ANIMATED CARD (Unchanged) === */
-  .about-blurb .container {
-    padding: 4rem 0;
+  /* --- NEW: RESULTS SECTION --- */
+  .results-section {
+    padding: 0;
+    width: 100%;
   }
-  .about-card {
-    position: relative;
-    overflow: hidden; 
-    background-color: var(--color-text-body); 
+  .results-section .container {
+    padding: 4rem 2rem;
+    box-sizing: border-box;
+  }
+  .results-card {
+    background-color: #E0F7FA; 
     border-radius: 12px;
-    padding: 4rem;
-    max-width: 900px;
-    margin: 0 auto;
     border: 1px solid var(--color-text-light);
+    padding: 4rem;
+    color: var(--color-text-body);
+    text-align: center;
   }
-  .about-card-content {
+  .center-title {
+    text-align: center;
+    color: var(--color-primary);
+  }
+  .center-underline {
+    margin: 0 auto 2rem auto;
+  }
+  .results-intro {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: var(--color-text-body);
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+  .stat-item {
+    /* Border color adjusted for light background */
+    border-right: 1px solid rgba(0,0,0,0.1);
+    padding: 0 1rem;
+  }
+  .stat-item:last-child {
+    border-right: none;
+  }
+  .stat-number {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    /* Use primary color for numbers */
+    color: var(--color-primary); 
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .stat-label {
+    font-weight: 700;
+    color: var(--color-secondary); /* Keep yellow accent */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    /* Add text shadow for readability on light bg if needed */
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+  .stat-desc {
+    font-size: 1rem;
+    color: var(--color-text-body);
+    margin-bottom: 0.5rem;
+  }
+  .stat-client {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    font-style: italic;
+  }
+
+
+  /* --- 2. BEYOND PREDICTABLE (FIXED LAYOUT) --- */
+  .performance-section {
+    padding: 0;
+    width: 100%;
+  }
+  .performance-section .container {
+    padding: 4rem 2rem;
+    box-sizing: border-box;
+  }
+  .performance-card {
+    background-color: var(--color-text-body);
+    border-radius: 12px;
+    border: 1px solid var(--color-text-light);
+    overflow: hidden;
     position: relative;
-    z-index: 2;
-  }
-  .about-card h2,
-  .about-card p {
+    padding: 4rem;
     color: var(--color-bg);
   }
-  .bubble-background {
+  .card-bg-animation {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  .bubble-background i {
-    position: absolute;
-    bottom: -200px;
-    width: 40px;
-    height: 40px;
-    background-color: var(--color-warning); 
-    border-radius: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0) 70%);
     opacity: 0.6;
-    animation: rise 25s infinite linear;
+    animation: moveGradient 20s infinite alternate;
+    pointer-events: none;
+    z-index: 0;
   }
-  @keyframes rise {
-    0% {
-      transform: translateY(0) scale(1);
-      opacity: 0.6;
-    }
-    100% {
-      transform: translateY(-120vh) scale(0.2);
-      opacity: 0;
-    }
+  @keyframes moveGradient {
+    0% { transform: translate(-25%, -25%); }
+    100% { transform: translate(0, 0); }
   }
-  .bubble-background i:nth-child(1) { left: 10%; animation-duration: 20s; width: 30px; height: 30px; }
-  .bubble-background i:nth-child(2) { left: 20%; animation-duration: 15s; animation-delay: 2s; width: 50px; height: 50px; }
-  .bubble-background i:nth-child(3) { left: 30%; animation-duration: 22s; animation-delay: 5s; }
-  .bubble-background i:nth-child(4) { left: 40%; animation-duration: 18s; width: 20px; height: 20px; }
-  .bubble-background i:nth-child(5) { left: 50%; animation-duration: 25s; animation-delay: 1s; width: 60px; height: 60px; }
-  .bubble-background i:nth-child(6) { left: 60%; animation-duration: 16s; animation-delay: 3s; }
-  .bubble-background i:nth-child(7) { left: 70%; animation-duration: 21s; width: 35px; height: 35px; }
-  .bubble-background i:nth-child(8) { left: 80%; animation-duration: 17s; animation-delay: 4s; width: 55px; height: 55px; }
-  .bubble-background i:nth-child(9) { left: 90%; animation-duration: 23s; animation-delay: 6s; }
-  .bubble-background i:nth-child(10) { left: 55%; animation-duration: 28s; width: 25px; height: 25px; }
-
-
-  /* === 3. SERVICE CARDS: VIBRANT COLORS (Unchanged) === */
-  .services-preview .service-card {
-    border: none;
-    color: var(--color-bg); 
-  }
-  .services-preview .service-card h3 {
-    color: var(--color-bg); 
-  }
-  .services-preview .service-card:nth-child(1) {
-    background-color: var(--color-accent); /* Info Blue */
-  }
-  .services-preview .service-card:nth-child(2) {
-    background-color: var(--color-success); /* Success Green */
-  }
-  .services-preview .service-card:nth-child(3) {
-    background-color: var(--color-secondary); /* Secondary Yellow */
-    color: var(--color-primary); 
-  }
-  .services-preview .service-card:nth-child(3) h3 {
-     color: var(--color-primary); 
+  
+  .performance-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
   }
 
-  /* === 4. CLIENT TRUST: SCROLLER & BG (UPDATED) === */
+  .performance-content {
+    text-align: left;
+  }
+  .section-title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-bg);
+  }
+  .title-underline {
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-secondary);
+    margin-bottom: 2rem;
+  }
+  .performance-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: var(--color-bg-light);
+  }
+  .performance-content strong { color: var(--color-bg); }
+  .performance-cta { margin-top: 2rem; }
 
-  @keyframes scrollLeft {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+  /* GRAPH CONTAINER */
+  .performance-graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* SVG Wrapper: FULL WIDTH */
+  .svg-graph-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    transform: translateX(-50px);
+  }
+  .main-chart-svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
   }
 
-  @keyframes animatedGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  /* LOGO OVERLAY */
+  .logo-overlay {
+    position: absolute;
+    top: 40%;
+    right: -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+  }
+  /* Updated Logo Size: 80px + 15% = ~92px */
+  .graph-logo-img {
+    width: 69px;
+    height: auto;
+  }
+  .graph-logo-text {
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    margin-top: 5px;
   }
 
+  /* --- 3. SERVICES (Unchanged) --- */
+  .services-preview .service-card { border: none; color: var(--color-bg); }
+  .services-preview .service-card h3 { color: var(--color-bg); }
+  .services-preview .service-card:nth-child(1) { background-color: var(--color-accent); }
+  .services-preview .service-card:nth-child(2) { background-color: var(--color-success); }
+  .services-preview .service-card:nth-child(3) { background-color: var(--color-secondary); color: var(--color-primary); }
+  .services-preview .service-card:nth-child(3) h3 { color: var(--color-primary); }
+
+  /* --- 4. CLIENTS (FULL WIDTH) --- */
+  @keyframes scrollLeft { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes animatedGradient { 
+    0% { background-position: 0% 50%; } 
+    50% { background-position: 100% 50%; } 
+    100% { background-position: 0% 50%; } 
+  }
   .clients-trust {
     position: relative;
     overflow: hidden;
-    background-color: var(--color-bg); /* CHANGED: White background */
+    background-color: var(--color-bg);
+    width: 100%;
+    padding-bottom: 6rem;
   }
-
-  /* New subtle animated background */
   .clients-trust::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    /* CHANGED: Subtle white/silver gradient */
-    background: linear-gradient(
-      90deg,
-      var(--color-bg),
-      var(--color-bg-light),
-      var(--color-bg)
-    );
+    top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
+    background: linear-gradient(90deg, var(--color-bg), var(--color-bg-light), var(--color-bg));
     background-size: 200% 200%;
     animation: animatedGradient 25s ease infinite;
-    opacity: 1; /* It's very subtle, so 1 is fine */
+    opacity: 1;
   }
-
-  .clients-trust .container {
-    position: relative;
-    z-index: 1;
-  }
+  .clients-trust .container { position: relative; z-index: 1; }
+  .clients-trust .container h2 { color: var(--color-primary); }
+  .clients-trust .container p { color: var(--color-text-body); }
   
-  /* NEW: Make text dark on the new white background */
-  .clients-trust .container h2 {
-    color: var(--color-primary);
+  .logo-scroller-container { 
+    overflow: hidden; 
+    margin-top: 3rem; 
+    width: 100%; 
   }
-  .clients-trust .container p {
-    color: var(--color-text-body);
+  .logo-scroller { 
+    display: flex; 
+    width: max-content; 
+    white-space: nowrap; 
+    padding: 1rem 0; 
   }
-
-  .logo-scroller-container {
-    overflow: hidden;
-    margin-top: 3rem;
-  }
-
-  .logo-scroller {
-    display: flex;
-    width: max-content;
-    white-space: nowrap;
-    padding: 1rem 0;
-  }
-  
-  .scroll-left {
-    animation: scrollLeft 60s linear infinite; 
-  }
-  
-  .scroll-right {
-    animation: scrollLeft 70s linear infinite reverse; 
-  }
-
+  .scroll-left { animation: scrollLeft 60s linear infinite; }
+  .scroll-right { animation: scrollLeft 70s linear infinite reverse; }
   .client-logo-item {
-    max-height: 75px; /* CHANGED: Use max-height for flexibility */
-    height: auto; /* ADDED */
-    width: auto;  
-    max-width: 200px; 
-    object-fit: contain; 
-    padding: 0 3rem; 
-    /* filter: brightness(0) invert(1); REMOVED */
-    opacity: 1; /* CHANGED: Full opacity */
+    max-height: 75px; height: auto; width: auto; max-width: 200px;
+    object-fit: contain; padding: 0 3rem; opacity: 1;
+  }
+
+  /* --- RESPONSIVE --- */
+  @media (max-width: 900px) {
+    .performance-grid {
+      grid-template-columns: 1fr;
+    }
+    .performance-graph {
+      margin-top: 3rem;
+    }
+    .performance-card {
+      padding: 2rem;
+    }
+    /* Stack stats on tablet */
+    .stats-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    .stat-item {
+      border-right: none; /* Remove border on stacked items */
+    }
+
+    /* Hide 3rd column on tablet */
+    .collage-column:nth-child(3) {
+      display: none;
+    }
+    .svg-graph-wrapper {
+      transform: none;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .hero .container h1 {
+      font-size: 2rem; /* Adjusted for smaller screens */
+    }
+    /* Stack stats on mobile */
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+    /* Hide 2nd column on mobile (show only 1) */
+    .collage-column:nth-child(2) {
+      display: none;
+    }
+    .results-card {
+      padding: 2rem 1rem;
+    }
+    .stat-number {
+        font-size: 2.5rem;
+    }
   }
 </style>
+
+<!-- SCRIPT for Counting Numbers -->
+<script lang="ts">
+  // Function to animate numbers
+  function animateValue(obj: HTMLElement, start: number, end: number, duration: number) {
+    let startTimestamp: number | null = null;
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      obj.innerHTML = Math.floor(progress * (end - start) + start) + "%";
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+
+  // Observer to trigger animation when visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const counters = entry.target.querySelectorAll('.stat-number');
+        counters.forEach((counter) => {
+          const dataTarget = counter.getAttribute('data-target');
+          if (dataTarget) {
+            const target = parseInt(dataTarget);
+            // Cast counter to HTMLElement to satisfy the type checker
+            animateValue(counter as HTMLElement, 0, target, 2000); // 2000ms duration
+          }
+        });
+        observer.unobserve(entry.target); // Run only once
+      }
+    });
+  }, { threshold: 0.5 });
+
+  // Start observing the results card
+  const resultsSection = document.querySelector('.results-card');
+  if (resultsSection) {
+    observer.observe(resultsSection);
+  }
+</script>
